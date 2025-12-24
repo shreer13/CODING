@@ -32,11 +32,23 @@ while True:
         
     elif user_input == 3:
         break
+
+    elif user_input == 4:
+        my_tasks = load_tasks()
+        if len(my_tasks) == 0:
+            print("Empty!")
+        else:
+            print("Enter task number to delete: ")
+            deletion = int(input())
+            index = deletion - 1
+            my_tasks.pop(index)
+            save_tasks(my_tasks)
         
         
         
    
      
+
 
 
 
